@@ -3,8 +3,7 @@
 True Track is a simple team task tracker. Users log in, create operational tasks, assign them to a person,
 set a priority, move them through **Pending → In Progress → Completed**, and see the totals on a dashboard.
 
-It is a learning project: the code is kept small, layered and commented so you can read every file and
-explain it in an interview. See **[INTERVIEW_PREPARATION.md](INTERVIEW_PREPARATION.md)**.
+The code is organised in clear layers (controller, service, repository, entity) with commented, readable classes.
 
 ---
 
@@ -65,7 +64,6 @@ True-Track/
 ├── database/             create-database.sql, schema.sql, sample-data.sql
 ├── postman/              True-Track.postman_collection.json
 ├── API_REFERENCE.md      every endpoint with request/response examples
-├── INTERVIEW_PREPARATION.md
 └── .env.example          list of environment variables
 ```
 
@@ -257,4 +255,4 @@ search / filter → open details → change status → edit → delete → log o
 | Logged out unexpectedly | The token expired (24 h by default) or `JWT_SECRET` changed (all old tokens become invalid). Log in again. |
 | `mvn` not found | Install Maven or use your IDE's built-in Maven. |
 | `invalid target release: 1.8` style errors | Check `java -version`; any JDK 8–21 works. In IntelliJ, set the Project SDK to an installed JDK. |
-| `npm audit` warnings | They are in the dev tools (Vite/Vitest/React Router 6). They don't affect how the app works for local learning; upgrading to Vite 6+/React Router 7 fixes them. |
+| `npm audit` warnings | They are in the dev tools (Vite/Vitest/React Router 6). They don't affect how the app runs locally; upgrading to Vite 6+/React Router 7 fixes them. |
