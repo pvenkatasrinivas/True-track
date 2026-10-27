@@ -1,0 +1,21 @@
+package com.truetrack.dto;
+
+/** Returned after a successful login or registration. */
+public class AuthResponse {
+
+    private final String token;
+    private final UserResponse user;
+
+    public AuthResponse(String token, UserResponse user) {
+        this.token = token;
+        this.user = user;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public UserResponse getUser() {
+        return user;
+    }
+}
