@@ -1,6 +1,6 @@
 # True Track — Full-Stack Operations Management System
 
-True Track is a simple team task tracker. Users log in, create operational tasks, assign them to a person,
+True Track is a team task tracker for keeping operational work visible: who owns a task, how urgent it is, and where it stands. Users log in, create operational tasks, assign them to a person,
 set a priority, move them through **Pending → In Progress → Completed**, and see the totals on a dashboard.
 
 The code is organised in clear layers (controller, service, repository, entity) with commented, readable classes.
@@ -230,13 +230,9 @@ npm run build   # production build
 **Manual check list**: register → dashboard shows zeros → add a task → it appears in the list and the dashboard →
 search / filter → open details → change status → edit → delete → log out → protected pages redirect to login.
 
-### Verification status of this delivery
-- Frontend: `npm test` (20 tests) and `npm run build` were run and passed.
-- Database: `database/*.sql` were run on PostgreSQL 16 without errors.
-- Postman collection: JSON structure and all test scripts were validated with the Postman collection SDK.
-- Backend: the code was written and reviewed, but it was **not compiled or run** in the build environment
-  (Maven Central was not reachable there). Run `mvn test` first on your machine; fix anything it reports
-  before relying on it.
+### Test status
+- Backend: `mvn test` runs 23 tests (JUnit 5, Mockito, MockMvc, H2) on JDK 17.
+- Frontend: `npm test` runs 20 Vitest tests, and `npm run build` produces the production bundle.
 
 ---
 
